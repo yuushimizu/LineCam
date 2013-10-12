@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CAACC20018093F5400170FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC1FF18093F5400170FC5 /* Foundation.framework */; };
+		CAACC20218093F5400170FC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC20118093F5400170FC5 /* CoreGraphics.framework */; };
+		CAACC20418093F5400170FC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC20318093F5400170FC5 /* UIKit.framework */; };
+		CAACC20A18093F5400170FC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAACC20818093F5400170FC5 /* InfoPlist.strings */; };
+		CAACC20C18093F5400170FC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACC20B18093F5400170FC5 /* main.m */; };
+		CAACC21018093F5400170FC5 /* LCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACC20F18093F5400170FC5 /* LCAppDelegate.m */; };
+		CAACC21318093F5400170FC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAACC21118093F5400170FC5 /* Main.storyboard */; };
+		CAACC21618093F5400170FC5 /* LCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACC21518093F5400170FC5 /* LCViewController.m */; };
+		CAACC21818093F5400170FC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAACC21718093F5400170FC5 /* Images.xcassets */; };
+		CAACC21F18093F5400170FC5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC21E18093F5400170FC5 /* XCTest.framework */; };
+		CAACC22018093F5400170FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC1FF18093F5400170FC5 /* Foundation.framework */; };
+		CAACC22118093F5400170FC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC20318093F5400170FC5 /* UIKit.framework */; };
+		CAACC22918093F5400170FC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAACC22718093F5400170FC5 /* InfoPlist.strings */; };
+		CAACC22B18093F5400170FC5 /* LineCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACC22A18093F5400170FC5 /* LineCamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAACC22218093F5400170FC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAACC1F418093F5400170FC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAACC1FB18093F5400170FC5;
+			remoteInfo = LineCam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CAACC1FC18093F5400170FC5 /* LineCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAACC1FF18093F5400170FC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAACC20118093F5400170FC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CAACC20318093F5400170FC5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CAACC20718093F5400170FC5 /* LineCam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LineCam-Info.plist"; sourceTree = "<group>"; };
+		CAACC20918093F5400170FC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAACC20B18093F5400170FC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAACC20D18093F5400170FC5 /* LineCam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LineCam-Prefix.pch"; sourceTree = "<group>"; };
+		CAACC20E18093F5400170FC5 /* LCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCAppDelegate.h; sourceTree = "<group>"; };
+		CAACC20F18093F5400170FC5 /* LCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCAppDelegate.m; sourceTree = "<group>"; };
+		CAACC21218093F5400170FC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAACC21418093F5400170FC5 /* LCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCViewController.h; sourceTree = "<group>"; };
+		CAACC21518093F5400170FC5 /* LCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCViewController.m; sourceTree = "<group>"; };
+		CAACC21718093F5400170FC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CAACC21D18093F5400170FC5 /* LineCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LineCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAACC21E18093F5400170FC5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CAACC22618093F5400170FC5 /* LineCamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LineCamTests-Info.plist"; sourceTree = "<group>"; };
+		CAACC22818093F5400170FC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAACC22A18093F5400170FC5 /* LineCamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineCamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAACC1F918093F5400170FC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAACC20218093F5400170FC5 /* CoreGraphics.framework in Frameworks */,
+				CAACC20418093F5400170FC5 /* UIKit.framework in Frameworks */,
+				CAACC20018093F5400170FC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAACC21A18093F5400170FC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAACC21F18093F5400170FC5 /* XCTest.framework in Frameworks */,
+				CAACC22118093F5400170FC5 /* UIKit.framework in Frameworks */,
+				CAACC22018093F5400170FC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAACC1F318093F5400170FC5 = {
+			isa = PBXGroup;
+			children = (
+				CAACC20518093F5400170FC5 /* LineCam */,
+				CAACC22418093F5400170FC5 /* LineCamTests */,
+				CAACC1FE18093F5400170FC5 /* Frameworks */,
+				CAACC1FD18093F5400170FC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAACC1FD18093F5400170FC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAACC1FC18093F5400170FC5 /* LineCam.app */,
+				CAACC21D18093F5400170FC5 /* LineCamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAACC1FE18093F5400170FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAACC1FF18093F5400170FC5 /* Foundation.framework */,
+				CAACC20118093F5400170FC5 /* CoreGraphics.framework */,
+				CAACC20318093F5400170FC5 /* UIKit.framework */,
+				CAACC21E18093F5400170FC5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAACC20518093F5400170FC5 /* LineCam */ = {
+			isa = PBXGroup;
+			children = (
+				CAACC20E18093F5400170FC5 /* LCAppDelegate.h */,
+				CAACC20F18093F5400170FC5 /* LCAppDelegate.m */,
+				CAACC21118093F5400170FC5 /* Main.storyboard */,
+				CAACC21418093F5400170FC5 /* LCViewController.h */,
+				CAACC21518093F5400170FC5 /* LCViewController.m */,
+				CAACC21718093F5400170FC5 /* Images.xcassets */,
+				CAACC20618093F5400170FC5 /* Supporting Files */,
+			);
+			path = LineCam;
+			sourceTree = "<group>";
+		};
+		CAACC20618093F5400170FC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAACC20718093F5400170FC5 /* LineCam-Info.plist */,
+				CAACC20818093F5400170FC5 /* InfoPlist.strings */,
+				CAACC20B18093F5400170FC5 /* main.m */,
+				CAACC20D18093F5400170FC5 /* LineCam-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAACC22418093F5400170FC5 /* LineCamTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAACC22A18093F5400170FC5 /* LineCamTests.m */,
+				CAACC22518093F5400170FC5 /* Supporting Files */,
+			);
+			path = LineCamTests;
+			sourceTree = "<group>";
+		};
+		CAACC22518093F5400170FC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAACC22618093F5400170FC5 /* LineCamTests-Info.plist */,
+				CAACC22718093F5400170FC5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAACC1FB18093F5400170FC5 /* LineCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAACC22E18093F5400170FC5 /* Build configuration list for PBXNativeTarget "LineCam" */;
+			buildPhases = (
+				CAACC1F818093F5400170FC5 /* Sources */,
+				CAACC1F918093F5400170FC5 /* Frameworks */,
+				CAACC1FA18093F5400170FC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LineCam;
+			productName = LineCam;
+			productReference = CAACC1FC18093F5400170FC5 /* LineCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAACC21C18093F5400170FC5 /* LineCamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAACC23118093F5400170FC5 /* Build configuration list for PBXNativeTarget "LineCamTests" */;
+			buildPhases = (
+				CAACC21918093F5400170FC5 /* Sources */,
+				CAACC21A18093F5400170FC5 /* Frameworks */,
+				CAACC21B18093F5400170FC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAACC22318093F5400170FC5 /* PBXTargetDependency */,
+			);
+			name = LineCamTests;
+			productName = LineCamTests;
+			productReference = CAACC21D18093F5400170FC5 /* LineCamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAACC1F418093F5400170FC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Yuu Shimizu";
+				TargetAttributes = {
+					CAACC21C18093F5400170FC5 = {
+						TestTargetID = CAACC1FB18093F5400170FC5;
+					};
+				};
+			};
+			buildConfigurationList = CAACC1F718093F5400170FC5 /* Build configuration list for PBXProject "LineCam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAACC1F318093F5400170FC5;
+			productRefGroup = CAACC1FD18093F5400170FC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAACC1FB18093F5400170FC5 /* LineCam */,
+				CAACC21C18093F5400170FC5 /* LineCamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAACC1FA18093F5400170FC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAACC21818093F5400170FC5 /* Images.xcassets in Resources */,
+				CAACC20A18093F5400170FC5 /* InfoPlist.strings in Resources */,
+				CAACC21318093F5400170FC5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAACC21B18093F5400170FC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAACC22918093F5400170FC5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAACC1F818093F5400170FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAACC20C18093F5400170FC5 /* main.m in Sources */,
+				CAACC21018093F5400170FC5 /* LCAppDelegate.m in Sources */,
+				CAACC21618093F5400170FC5 /* LCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAACC21918093F5400170FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAACC22B18093F5400170FC5 /* LineCamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAACC22318093F5400170FC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAACC1FB18093F5400170FC5 /* LineCam */;
+			targetProxy = CAACC22218093F5400170FC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAACC20818093F5400170FC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAACC20918093F5400170FC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAACC21118093F5400170FC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAACC21218093F5400170FC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAACC22718093F5400170FC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAACC22818093F5400170FC5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAACC22C18093F5400170FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CAACC22D18093F5400170FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAACC22F18093F5400170FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LineCam/LineCam-Prefix.pch";
+				INFOPLIST_FILE = "LineCam/LineCam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CAACC23018093F5400170FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LineCam/LineCam-Prefix.pch";
+				INFOPLIST_FILE = "LineCam/LineCam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CAACC23218093F5400170FC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LineCam.app/LineCam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LineCam/LineCam-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LineCamTests/LineCamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CAACC23318093F5400170FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LineCam.app/LineCam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LineCam/LineCam-Prefix.pch";
+				INFOPLIST_FILE = "LineCamTests/LineCamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAACC1F718093F5400170FC5 /* Build configuration list for PBXProject "LineCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAACC22C18093F5400170FC5 /* Debug */,
+				CAACC22D18093F5400170FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAACC22E18093F5400170FC5 /* Build configuration list for PBXNativeTarget "LineCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAACC22F18093F5400170FC5 /* Debug */,
+				CAACC23018093F5400170FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CAACC23118093F5400170FC5 /* Build configuration list for PBXNativeTarget "LineCamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAACC23218093F5400170FC5 /* Debug */,
+				CAACC23318093F5400170FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAACC1F418093F5400170FC5 /* Project object */;
+}
