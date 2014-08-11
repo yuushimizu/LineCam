@@ -21,6 +21,9 @@
 		CAACC22118093F5400170FC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC20318093F5400170FC5 /* UIKit.framework */; };
 		CAACC22918093F5400170FC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAACC22718093F5400170FC5 /* InfoPlist.strings */; };
 		CAACC22B18093F5400170FC5 /* LineCamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACC22A18093F5400170FC5 /* LineCamTests.m */; };
+		CAACC2351809403400170FC5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC2341809403400170FC5 /* AVFoundation.framework */; };
+		CAACC23B180966DB00170FC5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC23A180966DB00170FC5 /* CoreVideo.framework */; };
+		CAACC23D180966DF00170FC5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAACC23C180966DF00170FC5 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		CAACC22618093F5400170FC5 /* LineCamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LineCamTests-Info.plist"; sourceTree = "<group>"; };
 		CAACC22818093F5400170FC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CAACC22A18093F5400170FC5 /* LineCamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineCamTests.m; sourceTree = "<group>"; };
+		CAACC2341809403400170FC5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CAACC23A180966DB00170FC5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		CAACC23C180966DF00170FC5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAACC23D180966DF00170FC5 /* CoreMedia.framework in Frameworks */,
+				CAACC23B180966DB00170FC5 /* CoreVideo.framework in Frameworks */,
+				CAACC2351809403400170FC5 /* AVFoundation.framework in Frameworks */,
 				CAACC20218093F5400170FC5 /* CoreGraphics.framework in Frameworks */,
 				CAACC20418093F5400170FC5 /* UIKit.framework in Frameworks */,
 				CAACC20018093F5400170FC5 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,9 @@
 		CAACC1FE18093F5400170FC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAACC23C180966DF00170FC5 /* CoreMedia.framework */,
+				CAACC23A180966DB00170FC5 /* CoreVideo.framework */,
+				CAACC2341809403400170FC5 /* AVFoundation.framework */,
 				CAACC1FF18093F5400170FC5 /* Foundation.framework */,
 				CAACC20118093F5400170FC5 /* CoreGraphics.framework */,
 				CAACC20318093F5400170FC5 /* UIKit.framework */,

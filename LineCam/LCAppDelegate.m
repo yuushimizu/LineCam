@@ -7,12 +7,17 @@
 //
 
 #import "LCAppDelegate.h"
+#import "LCViewController.h"
 
 @implementation LCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.rootViewController = [[LCViewController alloc] initWithCoder:nil];
+    [UIApplication sharedApplication].statusBarHidden = YES;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
