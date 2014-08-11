@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AC329BA4-B239-4288-BE04-14FF46B68E3F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LineCam</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E2E6C38C-12B7-4B6F-B61C-9A0F8F22BCCA</key>
+		<string>gitolite.localhost:LineCam</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LineCam.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E2E6C38C-12B7-4B6F-B61C-9A0F8F22BCCA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>gitolite.localhost:LineCam</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E2E6C38C-12B7-4B6F-B61C-9A0F8F22BCCA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2E6C38C-12B7-4B6F-B61C-9A0F8F22BCCA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LineCam</string>
+		</dict>
+	</array>
+</dict>
+</plist>

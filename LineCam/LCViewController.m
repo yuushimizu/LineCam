@@ -2,6 +2,7 @@
 
 @interface LCViewController () {
     UIImageView *_imageView;
+    CGImageRef _currentImage;
     AVCaptureSession  *_captureSession;
     CGContextRef _drawnContext;
 }
@@ -21,11 +22,11 @@
     [view addSubview:_imageView];
 }
 
-- (AVCaptureDeviceFormat *)captureDeviceFormat:(AVCaptureDevice *)captureDevice {
+- (AVCaptureDeviceFormat *)captureDeviceFormat:(AVCaptureDevice *)captureDevice fps:(int)fps {
     for (AVCaptureDeviceFormat *captureDeviceFormat in captureDevice.formats) {
         if (captureDeviceFormat.mediaType == AVMediaTypeVideo) {
             for (AVFrameRateRange *frameRateRange in captureDeviceFormat.videoSupportedFrameRateRanges) {
-                if (frameRateRange.maxFrameRate >= 60) return captureDeviceFormat;
+                if (frameRateRange.maxFrameRate >= fps) return captureDeviceFormat;
             }
         }
     }
@@ -34,13 +35,14 @@
 
 - (void)setupCaptureSession {
     _captureSession = [[AVCaptureSession alloc] init];
-    _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+    _captureSession.sessionPreset = AVCaptureSessionPresetInputPriority;
     AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     [captureDevice lockForConfiguration:nil];
-//    AVCaptureDeviceFormat *captureDeviceFormat = [self captureDeviceFormat:captureDevice];
-//    if (captureDeviceFormat) captureDevice.activeFormat = captureDeviceFormat;
-//    captureDevice.activeVideoMaxFrameDuration = CMTimeMake(1, 60);
-//    captureDevice.activeVideoMinFrameDuration = CMTimeMake(1, 60);
+    int fps = 120;
+    AVCaptureDeviceFormat *captureDeviceFormat = [self captureDeviceFormat:captureDevice fps:fps];
+    captureDevice.activeFormat = captureDeviceFormat;
+    captureDevice.activeVideoMaxFrameDuration = CMTimeMake(1, fps);
+    captureDevice.activeVideoMinFrameDuration = CMTimeMake(1, fps);
     [captureDevice unlockForConfiguration];
     AVCaptureDeviceInput *captureDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:nil];
     [captureDevice lockForConfiguration:nil];
@@ -70,6 +72,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setImage {
+    _imageView.image = [UIImage imageWithCGImage:_currentImage scale:1.0f orientation:UIImageOrientationRight];
+}
+
 - (void)updateImage:(CMSampleBufferRef)sampleBuffer {
     int lineWidth = 1;
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -85,16 +91,17 @@
     if (!_drawnContext) {
         _drawnContext = CGBitmapContextCreate(NULL, screenSize.width, screenSize.height, 8, screenSize.width * 4, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
     }
-    if (_imageView.image) {
-        CGContextDrawImage(_drawnContext, CGRectMake(0, -lineWidth, screenSize.width, screenSize.height), _imageView.image.CGImage);
+    if (_currentImage) {
+        CGContextDrawImage(_drawnContext, CGRectMake(0, -lineWidth, screenSize.width, screenSize.height), _currentImage);
     }
     CGImageRef lineImage = CGImageCreateWithImageInRect(capturedImage, CGRectMake(0, capturedHeight / 2, capturedWidth, lineWidth));
     CGImageRelease(capturedImage);
     CGContextDrawImage(_drawnContext, CGRectMake(0, screenSize.height - lineWidth, screenSize.width, lineWidth), lineImage);
     CGImageRelease(lineImage);
-    CGImageRef nextImage = CGBitmapContextCreateImage(_drawnContext);
-    [_imageView performSelectorOnMainThread:@selector(setImage:) withObject:[UIImage imageWithCGImage:nextImage scale:1.0f orientation:UIImageOrientationRight] waitUntilDone:YES];
-    CGImageRelease(nextImage);
+    CGImageRef previousImage = _currentImage;
+    _currentImage = CGBitmapContextCreateImage(_drawnContext);
+    if (previousImage) CGImageRelease(previousImage);
+    [self performSelectorOnMainThread:@selector(setImage) withObject:nil waitUntilDone:YES];
     CGColorSpaceRelease(colorSpace);
 }
 
@@ -103,6 +110,7 @@
 }
 
 - (void)dealloc {
+    if (_currentImage) CGImageRelease(_currentImage);
     if (_drawnContext) CGContextRelease(_drawnContext);
 }
 
